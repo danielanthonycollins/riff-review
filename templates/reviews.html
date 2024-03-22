@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riff Review</title>
+</head>
+<body>
+    {% for review in reviews %}
+        {{ review.genre_name }}<br>
+        {{ review.song_name }}<br>
+        {{ review.artist_name }}<br>
+        {{ review.explicit_language }}<br>
+        {{ review.review_title }}<br>
+        {{ review.review_content }}<br>
+    {% endfor %}
+</body>
+</html>
