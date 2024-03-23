@@ -46,6 +46,24 @@
           </nav>
     </header>
     
+
+  <section>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+            <div class="container-fluid">
+              <div class="row flashes-container">
+                <div class="col">
+                  <p class="text-center flash-text">{{ message }}</p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</section>
+
+
     {% block content %}
     {% endblock %}
 
