@@ -13,19 +13,21 @@
                 <div class="mb-3">
                     <i class="fa-solid fa-user-pen"></i>
                     <label for="username" class="form-label">Username</label>
-                    <input type="text" class="form-control" id="username" name="username">
+                    <input type="text" class="form-control" id="username" name="username" minlength="6" maxlength="20" pattern="^[a-zA-Z0-9]{6,20}$" required>
+                    <div class="form-text">Must be between 6 and 20 characters with no spaces and can only include letters and numbers.</div>
                 </div>
-                <div class="mb-3">
-                    <i class="fa-solid fa-key"></i>
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" name="password">
-                </div>
-                <div class="d-grid gap-2">
-                    <button type="submit" class="btn btn-secondary">Register</button>
-                </div>
-            </form>
+        <div class="mb-3">
+            <i class="fa-solid fa-key"></i>
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password" minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
+            <div class="form-text">Must be 8 characters minimum with no spaces and include at least one upper and lower case letter, one number and one special character (@$!%*?&).</div>
         </div>
+        <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-secondary">Register</button>
+        </div>
+        </form>
     </div>
+</div>
 </div>
 
 {% endblock %}

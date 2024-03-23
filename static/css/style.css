@@ -12,3 +12,7 @@
 .flash-text {
     margin-bottom: 0;
 }
+
+.form-text {
+    font-style: italic;
+}
