@@ -1,0 +1,1 @@
+Bug fixes: Eny/Env spelling error resulting in MONGO URI not being found when trying to run the app from gitpod, even though it was working on Heroku.
