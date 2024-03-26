@@ -1,3 +1,7 @@
+header {
+    margin-bottom: 1.5rem;
+}
+
 .justify-nav {
     justify-content: end;
 }
