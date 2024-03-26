@@ -9,30 +9,35 @@
     </div>
 </div>
 
+<!-- new review form -->
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <form method="POST" action="">
+            <form method="POST" action="{{ url_for('new_review') }}">
+                <!-- select genre dropdown -->
                 <div class="mb-3">
                     <i class="fa-solid fa-rectangle-list"></i>
                     <label for="genre-name">Music Genre</label>
                     <select class="form-select" id="genre-name" name="genre_name" required>
                         <option value="" disabled selected>Please select a genre...</option>
                         {% for genre in genres %}
-                            <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
+                        <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
                         {% endfor %}
                     </select>
                 </div>
+                <!-- song name input -->
                 <div class="mb-3">
                     <i class="fa-solid fa-music"></i>
                     <label for="song-name" class="form-label">Song Name</label>
                     <input type="text" class="form-control" id="song-name" name="song_name" required>
                 </div>
+                <!-- artist name input -->
                 <div class="mb-3">
                     <i class="fa-solid fa-user-group"></i>
                     <label for="artist-name" class="form-label">Artist Name</label>
                     <input type="text" class="form-control" id="artist-name" name="artist_name" required>
                 </div>
+                <!-- explicit language dropdown -->
                 <div class="mb-3">
                     <i class="fa-solid fa-triangle-exclamation"></i>
                     <label for="explicit-language">Does this song include explicit language?</label>
@@ -42,18 +47,24 @@
                         <option value="2">No</option>
                     </select>
                 </div>
+                <!-- review title input -->
                 <div class="mb-3">
                     <i class="fa-solid fa-pencil"></i>
                     <label for="review-title" class="form-label">Review Title</label>
                     <input type="text" class="form-control" id="review-title" name="review_title" required>
                 </div>
+                <!-- review content input -->
                 <div class="mb-3">
                     <i class="fa-solid fa-align-left"></i>
                     <label for="review-content" class="form-label">Review Content</label>
-                    <textarea class="form-control" id="review-content" name="review_content" rows="4" required></textarea>
+                    <textarea class="form-control" id="review-content" name="review_content" rows="4"
+                        required></textarea>
                 </div>
+                <!-- submit button -->
                 <div class="d-grid gap-2">
-                    <button type="submit" class="btn btn-secondary">Login</button>
+                    <button type="submit" class="btn btn-secondary">
+                        Submit Review <i class="fa-solid fa-bolt"></i>
+                    </button>
                 </div>
             </form>
         </div>

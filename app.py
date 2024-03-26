@@ -90,8 +90,22 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/new_review")
+@app.route("/new_review", methods=["GET", "POST"])
 def new_review():
+    if request.method == "POST":
+        review = {
+            "genre_name": request.form.get("genre_name"),
+            "song_name": request.form.get("song_name"),
+            "artist_name": request.form.get("artist_name"),
+            "explicit_language": request.form.get("explicit_language"),
+            "review_title": request.form.get("review_title"),
+            "review_content": request.form.get("review_content"),
+            "review_by": session["user"]
+        }
+        mongo.db.reviews.insert_one(review)
+        flash("Rock on! Your review has been submitted.")
+        return redirect(url_for("get_reviews"))
+
     genres = mongo.db.genres.find().sort("genre_name", 1)
     return render_template("new_review.html", genres=genres)
 
