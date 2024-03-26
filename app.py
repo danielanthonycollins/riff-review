@@ -28,6 +28,12 @@ def get_reviews():
     return render_template("reviews.html", reviews=reviews)
 
 
+@app.route('/review_details/<string:review_id>')
+def review_details(review_id):
+    review = mongo.db.reviews.find_one({'_id': ObjectId(review_id)})
+    return render_template('review_details.html', review=review)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
