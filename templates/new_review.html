@@ -18,9 +18,9 @@
                     <label for="genre-name">Music Genre</label>
                     <select class="form-select" id="genre-name" name="genre_name" required>
                         <option value="" disabled selected>Please select a genre...</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        {% for genre in genres %}
+                            <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
+                        {% endfor %}
                     </select>
                 </div>
                 <div class="mb-3">
