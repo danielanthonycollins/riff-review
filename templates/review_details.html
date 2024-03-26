@@ -4,9 +4,50 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col text-center">
-            <h1>Review details</h1>
-            <h2>{{ review.review_title }}</h2>
+            <h1><i>{{ review.review_title }}</i></h1>
         </div>
+    </div>
+    <div class="container" id="single-review-container">
+        <div class="row justify-content-center">
+            <div class="col-md-4 text-center">
+                <p>
+                    <b>Song Name:</b><br>
+                    {{ review.song_name }}
+                </p>
+            </div>
+            <div class="col-md-4 text-center">
+                <p>
+                    <b>Artist:</b><br>
+                    {{ review.artist_name }}
+                </p>
+            </div>
+            <div class="col-md-4 text-center">
+                <p>
+                    <b>Genre:</b><br>
+                    {{ review.genre_name }}
+                </p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col text-center">
+                <h2>
+                    A review by {{ review.review_by }}:
+                </h2>
+                <p>
+                    {{ review.review_content }}
+                </p>
+            </div>
+        </div>
+        {% if review.explicit_language == "yes" %}
+        <div class="row justify-content-center">
+            <div class="col text-center">
+                <div class="alert alert-danger" role="alert">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    Warning! This song contains explicit language.
+                </div>
+            </div>
+        </div>
+        {% endif %}
     </div>
 </div>
 
