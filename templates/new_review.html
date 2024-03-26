@@ -11,23 +11,46 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col text-center">
-            <h1>Login</h1>
-        </div>
-    </div>
-    <div class="row justify-content-center">
         <div class="col-md-8">
             <form method="POST" action="">
                 <div class="mb-3">
-                    <i class="fa-solid fa-user"></i>
-                    <label for="username" class="form-label">Username</label>
-                    <input type="text" class="form-control" id="username" name="username" minlength="6" maxlength="20"
-                        required>
+                    <i class="fa-solid fa-rectangle-list"></i>
+                    <label for="genre-name">Music Genre</label>
+                    <select class="form-select" id="genre-name" name="genre_name" required>
+                        <option value="" disabled selected>Please select a genre...</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
                 </div>
                 <div class="mb-3">
-                    <i class="fa-solid fa-key"></i>
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" name="password" minlength="8" required>
+                    <i class="fa-solid fa-music"></i>
+                    <label for="song-name" class="form-label">Song Name</label>
+                    <input type="text" class="form-control" id="song-name" name="song_name" required>
+                </div>
+                <div class="mb-3">
+                    <i class="fa-solid fa-user-group"></i>
+                    <label for="artist-name" class="form-label">Artist Name</label>
+                    <input type="text" class="form-control" id="artist-name" name="artist_name" required>
+                </div>
+                <div class="mb-3">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <label for="explicit-language">Does this song include explicit language?</label>
+                    <select class="form-select" id="explicit-language" name="explicit_language" required>
+                        <option value="" disabled selected>Please select an answer...</option>
+                        <option value="1">Yes</option>
+                        <option value="2">No</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <i class="fa-solid fa-pencil"></i>
+                    <label for="review-title" class="form-label">Review Title</label>
+                    <input type="text" class="form-control" id="review-title" name="review_title" required>
+                </div>
+                <div class="mb-3">
+                    <i class="fa-solid fa-align-left"></i>
+                    <label for="review-content" class="form-label">Review Content</label>
+                    <textarea class="form-control" id="review-content" name="review_content" rows="4" required></textarea>
                 </div>
                 <div class="d-grid gap-2">
                     <button type="submit" class="btn btn-secondary">Login</button>
