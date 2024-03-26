@@ -36,7 +36,7 @@
               <a class="nav-link" href="#">Reviews</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">New Review</a>
+              <a class="nav-link" href="{{ url_for('new_review') }}">New Review</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">Profile</a>

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col text-center">
+            <h1>New Review</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col text-center">
+            <h1>Login</h1>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <form method="POST" action="">
+                <div class="mb-3">
+                    <i class="fa-solid fa-user"></i>
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" minlength="6" maxlength="20"
+                        required>
+                </div>
+                <div class="mb-3">
+                    <i class="fa-solid fa-key"></i>
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" minlength="8" required>
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-secondary">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
