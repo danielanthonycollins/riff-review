@@ -48,9 +48,11 @@
                     <select class="form-select" id="explicit-language" name="explicit_language" required>
                         <option value="" disabled>Please select an answer...</option>
                         {% if review.explicit_language == "yes" %}
-                            <option value="yes">Yes</option>
-                        {% else %}
+                            <option value="yes" selected>Yes</option>
                             <option value="no">No</option>
+                        {% else %}
+                            <option value="yes">Yes</option>
+                            <option value="no" selected>No</option>
                         {% endif %}
                     </select>
                 </div>
