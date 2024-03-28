@@ -19,9 +19,13 @@
                     <i class="fa-solid fa-rectangle-list"></i>
                     <label for="genre-name">Music Genre</label>
                     <select class="form-select" id="genre-name" name="genre_name" required>
-                        <option value="" disabled selected>Please select a genre...</option>
+                        <option value="" disabled>Please select a genre...</option>
                         {% for genre in genres %}
-                        <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
+                            {% if genre.genre_name == review.genre_name %}
+                            <option value="{{ genre.genre_name }}" selected>{{ genre.genre_name }}</option>
+                            {% else %}
+                            <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
+                            {% endif %}
                         {% endfor %}
                     </select>
                 </div>
@@ -29,36 +33,41 @@
                 <div class="mb-3">
                     <i class="fa-solid fa-music"></i>
                     <label for="song-name" class="form-label">Song Name</label>
-                    <input type="text" class="form-control" id="song-name" name="song_name" required>
+                    <input type="text" class="form-control" id="song-name" name="song_name" value="{{ review.song_name }}" required>
                 </div>
                 <!-- edit artist name input -->
                 <div class="mb-3">
                     <i class="fa-solid fa-user-group"></i>
                     <label for="artist-name" class="form-label">Artist Name</label>
-                    <input type="text" class="form-control" id="artist-name" name="artist_name" required>
+                    <input type="text" class="form-control" id="artist-name" name="artist_name" value="{{ review.artist_name }}" required>
                 </div>
                 <!-- edit explicit language dropdown -->
                 <div class="mb-3">
                     <i class="fa-solid fa-triangle-exclamation"></i>
                     <label for="explicit-language">Does this song include explicit language?</label>
                     <select class="form-select" id="explicit-language" name="explicit_language" required>
-                        <option value="" disabled selected>Please select an answer...</option>
-                        <option value="1">Yes</option>
-                        <option value="2">No</option>
+                        <option value="" disabled>Please select an answer...</option>
+                        {% if review.explicit_language == "yes" %}
+                            <option value="yes">Yes</option>
+                        {% else %}
+                            <option value="no">No</option>
+                        {% endif %}
                     </select>
                 </div>
                 <!-- edit review title input -->
                 <div class="mb-3">
                     <i class="fa-solid fa-pencil"></i>
                     <label for="review-title" class="form-label">Review Title</label>
-                    <input type="text" class="form-control" id="review-title" name="review_title" required>
+                    <input type="text" class="form-control" id="review-title" name="review_title" value="{{ review.review_title }}" required>
                 </div>
                 <!-- edit review content input -->
                 <div class="mb-3">
                     <i class="fa-solid fa-align-left"></i>
                     <label for="review-content" class="form-label">Review Content</label>
                     <textarea class="form-control" id="review-content" name="review_content" rows="4"
-                        required></textarea>
+                        required>
+                    {{- review.review_content -}}
+                    </textarea>
                 </div>
                 <!-- submit button -->
                 <div class="d-grid gap-2">
