@@ -50,8 +50,10 @@
         {% endif %}
         <div class="row justify-content-center">
             <div class="col text-center">
-                <a href="{{ url_for('edit_review', review_id=review._id) }}"><button type="button" class="btn btn-success">Edit Review</button></a>
-                <a href=""></a><button type="button" class="btn btn-danger">Delete Review</button></a>
+                {% if session.user|lower == review.review_by|lower %}
+                    <a href="{{ url_for('edit_review', review_id=review._id) }}"><button type="button" class="btn btn-success">Edit Review</button></a>
+                    <a href=""></a><button type="button" class="btn btn-danger">Delete Review</button></a>
+                {% endif %}
             </div>
         </div>
     </div>
