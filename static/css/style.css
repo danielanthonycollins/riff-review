@@ -61,3 +61,7 @@ footer a {
     color: inherit !important;
     text-decoration: none !important;
 }
+
+.copyright {
+    padding-top: 1rem;
+}
