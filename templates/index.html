@@ -9,6 +9,7 @@
       <a href="{{ url_for('get_reviews') }}"><button class="btn btn-secondary btn-lg" type="button">Browse Reviews</button></a>
       {% else %}
       <a href="{{ url_for('register') }}"><button class="btn btn-secondary btn-lg" type="button">Register Here</button></a>
+      <p class="have-account">Have an account? <a href="{{ url_for('login') }}">Login here!</a></p>
       {% endif %}
     </div>
 </div>

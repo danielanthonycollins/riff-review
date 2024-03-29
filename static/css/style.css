@@ -12,6 +12,11 @@
     padding: 2.5rem 0;
 }
 
+.have-account {
+    padding-top: 0.9rem;
+    text-shadow: none;
+}
+
 header {
     margin-bottom: 1.5rem;
 }
