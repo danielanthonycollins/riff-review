@@ -52,6 +52,10 @@ footer {
     color: #9a9d9e;
 }
 
+.footer-heading {
+    color: #fff;
+}
+
 .footer-first-row {
     padding-top: 1.5rem;
 }
@@ -69,6 +73,11 @@ footer {
 footer a {
     color: inherit !important;
     text-decoration: none !important;
+}
+
+.white-link:hover {
+    color: #fff;
+    transition: 0.4s;
 }
 
 .copyright {
