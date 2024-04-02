@@ -1,3 +1,9 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
 .home-main-image {
     background: url(../images/homemainguitar2.jpg);
     background-position: center;
@@ -55,6 +61,7 @@ header {
 footer {
     background-color: #212529;
     color: #9a9d9e;
+    margin-top: auto;
 }
 
 .footer-heading {
