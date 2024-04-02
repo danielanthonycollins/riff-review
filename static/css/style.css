@@ -14,7 +14,12 @@
 
 .have-account {
     padding-top: 0.9rem;
+}
+
+.have-account a {
     text-shadow: none;
+    color: #fff;
+    text-decoration: none;
 }
 
 header {
