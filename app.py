@@ -91,8 +91,10 @@ def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     
+
     if session["user"]:
-        return render_template("profile.html", username=username)
+        user_reviews = list(mongo.db.reviews.find({"review_by": session["user"]}))
+        return render_template("profile.html", username=username, user_reviews=user_reviews)
 
     return redirect(url_for("login"))
     
@@ -140,12 +142,20 @@ def edit_review(review_id):
         flash("Rock on! Your review has been updated.")
 
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
+    if review["review_by"] != session["user"]:
+        flash("This is not your review.")
+        return redirect(url_for("get_reviews"))
     genres = mongo.db.genres.find().sort("genre_name", 1)
     return render_template("edit_review.html", review=review, genres=genres)
 
 
 @app.route("/delete_review/<review_id>")
 def delete_review(review_id):
+    review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
+    print(review["review_by"], session["user"])
+    if review["review_by"] != session["user"]:
+        flash("This is not your review.")
+        return redirect(url_for("get_reviews"))
     mongo.db.reviews.delete_one({"_id": ObjectId(review_id)})
     flash("Your review has been deleted.")
     return redirect(url_for("get_reviews"))
