@@ -58,6 +58,11 @@ header {
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
 }
 
+.card-footer {
+    background-color: #fff;
+    border-top: none;
+}
+
 footer {
     background-color: #212529;
     color: #9a9d9e;
