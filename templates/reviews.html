@@ -25,17 +25,41 @@
                         {{ review.genre_name }}</h6>
                     <p class="card-text">
                         {% if review.review_content|length > 90 %}
-                            {{ review.review_content|truncate(90, True) }}
+                        {{ review.review_content|truncate(90, True) }}
                         {% else %}
-                            {{ review.review_content}}
+                        {{ review.review_content}}
                         {% endif %}
                     </p>
                     <h6 class="card-subtitle mb-2 text-body-secondary">Author: {{ review.review_by }}</h6>
-                    
+
                 </div>
                 <div class="card-footer">
                     <a href="{{ url_for('review_details', review_id=review._id) }}" class="btn btn-secondary">Read
                         more</a>
+                    {% if session.user|lower == review.review_by|lower %}
+                    <a href="{{ url_for('edit_review', review_id=review._id) }}"><button type="button" class="btn btn-success">Edit</button></a>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
+                    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModal"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="deleteModalTitle">Please confirm</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Are you sure you want to delete your review of {{ review.song_name }} by {{ review.artist_name }}?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Go back</button>
+                                    <a href="{{ url_for('delete_review', review_id=review._id) }}"><button type="button" class="btn btn-danger">Delete Review</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
