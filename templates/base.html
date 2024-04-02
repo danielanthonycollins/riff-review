@@ -43,7 +43,25 @@
               <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">Profile</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
+              <a class="nav-link" data-bs-toggle="modal" data-bs-target="#logoutModal" href="#">Log Out</a>
+              <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModal" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="logoutModalTitle">Please confirm</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      Are you sure you want to log out?
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Go back</button>
+                      <a href="{{ url_for('logout') }}"><button type="button"
+                          class="btn btn-danger">Logout</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
             {% else %}
             <li class="nav-item">
@@ -85,16 +103,17 @@
       <div class="row footer-first-row">
         <div class="col-sm">
           <p class="text-uppercase footer-heading">Have a question? Get in touch</p>
-          <p class="white-link"><a href="mailto:admin@riffreview.com"><i class="fa-solid fa-envelope"></i> admin@riffreview.com</a></p>
+          <p class="white-link"><a href="mailto:admin@riffreview.com"><i class="fa-solid fa-envelope"></i>
+              admin@riffreview.com</a></p>
         </div>
         <div class="col-sm">
           <p class="text-uppercase footer-heading">For the groupies</p>
-          <a href="https://www.facebook.com/" target="_blank"
-            aria-label="Facebook (opens in a new tab)"><i class="fa-brands fa-facebook-f footer-social-icon"></i></a>
-          <a href="https://www.instagram.com/" target="_blank"
-            aria-label="Instagram (opens in a new tab)"><i class="fa-brands fa-instagram footer-social-icon"></i></a>
-          <a href="https://www.twitter.com/" target="_blank"
-            aria-label="Youtube (opens in a new tab)"><i class="fa-brands fa-x-twitter footer-social-icon"></i></a>
+          <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook (opens in a new tab)"><i
+              class="fa-brands fa-facebook-f footer-social-icon"></i></a>
+          <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram (opens in a new tab)"><i
+              class="fa-brands fa-instagram footer-social-icon"></i></a>
+          <a href="https://www.twitter.com/" target="_blank" aria-label="Youtube (opens in a new tab)"><i
+              class="fa-brands fa-x-twitter footer-social-icon"></i></a>
         </div>
       </div>
       <div class="row">

@@ -95,3 +95,8 @@ footer a {
 .copyright {
     padding-top: 1rem;
 }
+.modal-content {
+    background-color: #fff;
+    --bs-modal-footer-border-color: #dee2e6;
+    --bs-modal-header-border-color: #dee2e6;
+}
