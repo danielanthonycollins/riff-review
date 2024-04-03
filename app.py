@@ -1,4 +1,5 @@
 import os
+import random
 from flask import (Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
@@ -20,7 +21,11 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/index")
 def index():
-    return render_template("index.html")
+    reviews = list(mongo.db.reviews.find())
+    random.shuffle(reviews)
+    selected_reviews = reviews[:3]
+    print(selected_reviews)
+    return render_template("index.html", reviews=selected_reviews)
 
 @app.route("/get_reviews")
 def get_reviews():
