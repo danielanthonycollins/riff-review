@@ -47,6 +47,12 @@
                     </p>
                     <h6 class="card-subtitle mb-2 text-body-secondary">Author: {{ review.review_by }}</h6>
                 </div>
+                {% if session.user %}
+                <div class="card-footer">
+                    <a href="{{ url_for('review_details', review_id=review._id) }}" class="btn btn-secondary">Read
+                        more</a>
+                </div>
+                {% endif %}
             </div>
         </div>
         {% endfor %}

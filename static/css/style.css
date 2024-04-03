@@ -1,8 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
 body {
+    font-family: 'Oswald', sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-  }
+}
+
+h1 {
+    font-weight: 500;
+}
+
+h2 {
+    font-weight: 400;
+}
+
+h3 {
+    font-weight: 300;
+}
+
+h4 {
+    font-weight: 300;
+}
+
+h5 {
+    font-weight: 300;
+}
+
+h6 {
+    font-weight: 300;
+}
+
+p {
+    font-weight: 200;
+    font-size: 1.2rem;
+}
+
+a {
+    font-weight: 200;
+}
 
 .home-main-image {
     background: url(../images/homemainguitar2copy.jpg);
