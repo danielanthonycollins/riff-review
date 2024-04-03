@@ -24,7 +24,6 @@ def index():
     reviews = list(mongo.db.reviews.find())
     random.shuffle(reviews)
     selected_reviews = reviews[:3]
-    print(selected_reviews)
     return render_template("index.html", reviews=selected_reviews)
 
 @app.route("/get_reviews")

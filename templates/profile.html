@@ -17,17 +17,17 @@
         <div class="col-lg-4 col-md-6 mb-3">
             <div class="card h-100">
                 <div class="card-body">
-                    <h5 class="card-title">
+                    <h3 class="card-title">
                         {{ review.review_title }}
                         {% if review.explicit_language == "yes" %}
                         <i class="fa-solid fa-triangle-exclamation" data-bs-toggle="tooltip" data-bs-placement="top"
                             data-bs-custom-class="custom-tooltip" data-bs-title="Warning! Contains explicit language">
                         </i>
                         {% endif %}
-                    </h5>
-                    <h6 class="card-subtitle mb-2 text-body-secondary">{{ review.song_name }}, by
+                    </h3>
+                    <h4 class="card-subtitle mb-2 text-body-secondary">{{ review.song_name }}, by
                         {{ review.artist_name }},
-                        {{ review.genre_name }}</h6>
+                        {{ review.genre_name }}</h4>
                     <p class="card-text">
                         {% if review.review_content|length > 90 %}
                             {{ review.review_content|truncate(90, True) }}
@@ -35,7 +35,7 @@
                             {{ review.review_content}}
                         {% endif %}
                     </p>
-                    <h6 class="card-subtitle mb-2 text-body-secondary">Author: {{ review.review_by }}</h6>
+                    <p class="card-subtitle mb-2 text-body-secondary">Author: {{ review.review_by }}</p>
                     
                 </div>
                 <div class="card-footer">
