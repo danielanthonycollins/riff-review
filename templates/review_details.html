@@ -2,12 +2,17 @@
 {% block content %}
 
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mb-2">
         <div class="col text-center">
-            <h1><i>{{ review.review_title }}</i></h1>
+            <h1>Review details</h1>
         </div>
     </div>
     <div class="container mb-5 pb-3 pt-3" id="single-review-container">
+        <div class="row justify-content-center">
+            <div class="col text-center">
+                <h2 id="review-title">{{ review.review_title }}</h2>
+            </div>
+        </div>
         <div class="row justify-content-center">
             <div class="col-md-4 text-center">
                 <p>
@@ -30,9 +35,9 @@
         </div>
         <div class="row justify-content-center">
             <div class="col text-center">
-                <h2>
-                    A review by {{ review.review_by }}:
-                </h2>
+                <h3 id="review-by">
+                    <i>A review by {{ review.review_by }}:</i>
+                </h3>
                 <p>
                     {{ review.review_content }}
                 </p>
@@ -81,27 +86,3 @@
 </div>
 
 {% endblock %}
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Launch demo modal
-  </button>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
