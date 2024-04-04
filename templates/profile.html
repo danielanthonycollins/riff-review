@@ -25,7 +25,7 @@
             <div class="card h-100">
                 <div class="card-body d-flex flex-column">
                     <h3 class="card-title">
-                        {{ review.review_title }}
+                        <strong>{{ review.review_title }}</strong>
                         {% if review.explicit_language == "yes" %}
                         <i class="fa-solid fa-triangle-exclamation" data-bs-toggle="tooltip" data-bs-placement="top"
                             data-bs-custom-class="custom-tooltip" data-bs-title="Warning! Contains explicit language">
