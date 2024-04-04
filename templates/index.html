@@ -30,7 +30,8 @@
             </div>
         </div>
     </div>
-    <div class="row mb-5">
+    <div class="row mb-5 justify-content-center">
+        {% if reviews|length != 0 %}
         {% for review in reviews %}
         <div class="col-lg-4 col-md-6 mb-3">
             <div class="card h-100">
@@ -64,6 +65,14 @@
             </div>
         </div>
         {% endfor %}
+        {% else %}
+        <div class="col-lg-10 text-center">
+            <p>No reviews have been posted yet.</p>
+            {% if session.user %}
+            <a href="{{ url_for('new_review') }}"><button type="button" class="btn btn-secondary">Post the first review</button></a>
+            {% endif %}
+        </div>
+        {% endif %}
     </div>
 </div>
 
