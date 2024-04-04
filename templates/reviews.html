@@ -86,15 +86,14 @@
         {% endfor %}
         {% else %}
         <div class="col-lg-10 text-center">
-            <p>No reviews have been posted yet.</p>
+            <p>No reviews could be found.</p>
             {% if session.user %}
             <a href="{{ url_for('new_review') }}"><button type="button" class="btn btn-secondary">Post the first
-                    review</button></a>
+                    one</button></a>
             {% endif %}
         </div>
         {% endif %}
     </div>
 </div>
-
 
 {% endblock %}
