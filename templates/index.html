@@ -14,7 +14,7 @@
 </div>
 
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row mb-3 justify-content-center">
         <div class="col-lg-10 text-center">
             <h2>What is Riff Review?</h2>
             <p class="text-center">Riff Review is a friendly, online community where you can share your Rock/Metal music reviews, suggestions
@@ -22,11 +22,18 @@
             <p>To view and create reviews, you'll need to register an account above. Then you'll unlock the full features of the site.</p>
         </div>
     </div>
+    <div class="container">
+        <div class="row mb-3 justify-content-center">
+            <div class="text-center">
+                <h2>Recent Reviews</h2>
+            </div>
+        </div>
+    </div>
     <div class="row mb-5">
         {% for review in reviews %}
         <div class="col-lg-4 col-md-6 mb-3">
             <div class="card h-100">
-                <div class="card-body">
+                <div class="card-body d-flex flex-column">
                     <h3 class="card-title">
                         {{ review.review_title }}
                         {% if review.explicit_language == "yes" %}
@@ -45,7 +52,7 @@
                         {{ review.review_content}}
                         {% endif %}
                     </p>
-                    <p class="card-subtitle mb-2 text-body-secondary">Author: {{ review.review_by }}</p>
+                    <p class="card-subtitle mb-2 text-body-secondary mt-auto">Author: {{ review.review_by }}</p>
                 </div>
                 {% if session.user %}
                 <div class="card-footer">
