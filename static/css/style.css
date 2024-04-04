@@ -27,16 +27,7 @@ h3 {
 h4 {
     font-weight: 300;
     margin-bottom: 1rem;
-}
-
-h5 {
-    font-weight: 300;
-    margin-bottom: 1rem;
-}
-
-h6 {
-    font-weight: 300;
-    margin-bottom: 1rem;
+    font-size: 1.4rem;
 }
 
 p {
