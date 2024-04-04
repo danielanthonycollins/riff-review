@@ -44,10 +44,12 @@
                         </i>
                         {% endif %}
                     </h3>
-                    <h4 class="card-subtitle mb-2 text-body-secondary">{{ review.song_name }}, by
+                    <p class="card-subtitle mb-1 text-body-secondary">A review of:</p>
+                    <h4 class="card-subtitle mb-2">{{ review.song_name }}, by
                         {{ review.artist_name }},
                         {{ review.genre_name }}</h4>
                     <p class="card-text">
+                        Preview:
                         {% if review.review_content|length > 90 %}
                         {{ review.review_content|truncate(90, True) }}
                         {% else %}
