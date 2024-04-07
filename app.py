@@ -172,6 +172,21 @@ def delete_review(review_id):
     return redirect(url_for("get_reviews"))
 
 
+@app.errorhandler(404)
+def page_not_found(e):
+    """
+    With 404 error user is passed to a custom 404 page within the application
+    """
+    return render_template('404.html'), 404
+
+
+@app.errorhandler(500)
+def internal_error(err):
+    """
+    With 500 error user is passed to a custom 404 page within the application
+    """
+    return render_template('500.html'), 500
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
     port=int(os.environ.get("PORT")),
