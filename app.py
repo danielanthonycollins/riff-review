@@ -21,6 +21,10 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/index")
 def index():
+    """
+    Returns index page, along with 3 random reviews
+    to be displayed.
+    """
     reviews = list(mongo.db.reviews.find())
     random.shuffle(reviews)
     selected_reviews = reviews[:3]
@@ -28,12 +32,20 @@ def index():
 
 @app.route("/get_reviews")
 def get_reviews():
+    """
+    Retrieves all reviews from the database to be displayed
+    on the reviews page.
+    """
     reviews = list(mongo.db.reviews.find())
     return render_template("reviews.html", reviews=reviews)
 
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    """
+    Gets what the user searched for and queries the database
+    for any matching song or artist names.
+    """
     query = request.form.get("query")
     reviews = list(mongo.db.reviews.find({"$text": {"$search": query}}))
     return render_template("reviews.html", reviews=reviews)
@@ -41,12 +53,20 @@ def search():
 
 @app.route('/review_details/<string:review_id>')
 def review_details(review_id):
+    """
+    Gets the id of the review the user clicked on and redirects to
+    the review page for that specific review.
+    """
     review = mongo.db.reviews.find_one({'_id': ObjectId(review_id)})
     return render_template('review_details.html', review=review)
 
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    """
+    Add a new instance of user to the database if it doesn't already exist.
+    Checks if both password fields match.
+    """
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
@@ -74,6 +94,10 @@ def register():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    """
+    Returns the login page and allows user to log in by completing the form.
+    Checks the database to ensure the username and password entered match.
+    """
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
@@ -99,6 +123,10 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    """
+    Retrieves username from the session and finds all reviews linked
+    to that user. Redirects to the login page if no user is logged in.
+    """
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     
@@ -112,6 +140,9 @@ def profile(username):
 
 @app.route("/logout")
 def logout():
+    """
+    Logs out the session and pops the user. Redirects to login page.
+    """
     flash("You are logged out. Bye for now!")
     session.pop("user")
     return redirect(url_for("login"))
@@ -119,6 +150,10 @@ def logout():
 
 @app.route("/new_review", methods=["GET", "POST"])
 def new_review():
+    """
+    Returns the new_review page and sends the review to the database
+    when submitted.
+    """
     if request.method == "POST":
         review = {
             "genre_name": request.form.get("genre_name"),
@@ -139,6 +174,9 @@ def new_review():
 
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
+    """
+    Takes the review id and returns the edit review page for that review.
+    """
     if request.method == "POST":
         submit = {
             "genre_name": request.form.get("genre_name"),
@@ -162,6 +200,9 @@ def edit_review(review_id):
 
 @app.route("/delete_review/<review_id>")
 def delete_review(review_id):
+    """
+    Takes the review id and removes that specific review.
+    """
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
     print(review["review_by"], session["user"])
     if review["review_by"] != session["user"]:
@@ -175,7 +216,7 @@ def delete_review(review_id):
 @app.errorhandler(404)
 def page_not_found(e):
     """
-    With 404 error user is passed to a custom 404 page within the application
+    With 404 error user is passed to a custom 404 page within the application.
     """
     return render_template('404.html'), 404
 
@@ -183,7 +224,7 @@ def page_not_found(e):
 @app.errorhandler(500)
 def internal_error(err):
     """
-    With 500 error user is passed to a custom 404 page within the application
+    With 500 error user is passed to a custom 404 page within the application.
     """
     return render_template('500.html'), 500
 
