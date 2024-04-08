@@ -1,6 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
 
-<p>500 Error</p>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col text-center">
+            <h1>Oops!</h1>
+            <hr>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-lg-10 text-center">
+            <p>Something went wrong. But don't worry... Just <a href="{{ url_for('index') }}">click here</a> to go back home.
+            </p>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
