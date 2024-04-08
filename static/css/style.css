@@ -173,7 +173,7 @@ footer a {
     padding-top: 1rem;
 }
 
-/* Remove grey background from Bootstrap models */
+/* Remove grey background from Bootstrap modals */
 
 .modal-content {
     background-color: #fff;
