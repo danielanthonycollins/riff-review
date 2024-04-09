@@ -8,11 +8,14 @@
             <hr>
         </div>
     </div>
+    <!-- Welcome message -->
     <div class="row justify-content-center">
         <div class="col-lg-10 text-center">
-            <p>Welcome to your profile, {{ username }}! Here you can view, edit and delete any of your existing reviews.</p>
+            <p>Welcome to your profile, {{ username }}! Here you can view, edit and delete any of your existing reviews.
+            </p>
         </div>
     </div>
+    <!-- Users reviews section -->
     <div class="row justify-content-center">
         <div class="col mb-2 text-center">
             <h2>Your Reviews</h2>
@@ -39,20 +42,22 @@
                     <p class="card-text">
                         Preview:
                         {% if review.review_content|length > 90 %}
-                            {{ review.review_content|truncate(90, True) }}
+                        {{ review.review_content|truncate(90, True) }}
                         {% else %}
-                            {{ review.review_content}}
+                        {{ review.review_content}}
                         {% endif %}
                     </p>
                     <p class="card-subtitle mb-2 mt-auto text-body-secondary">Author: {{ review.review_by }}</p>
-                    
+
                 </div>
                 <div class="card-footer">
                     <a href="{{ url_for('review_details', review_id=review._id) }}" class="btn btn-secondary">Read
                         more</a>
                     {% if session.user|lower == review.review_by|lower %}
-                    <a href="{{ url_for('edit_review', review_id=review._id) }}"><button type="button" class="btn btn-success">Edit</button></a>
-                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
+                    <a href="{{ url_for('edit_review', review_id=review._id) }}"><button type="button"
+                            class="btn btn-success">Edit</button></a>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                        data-bs-target="#deleteModal">Delete</button>
                     <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModal"
                         aria-hidden="true">
                         <div class="modal-dialog">
@@ -63,12 +68,14 @@
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    Are you sure you want to delete your review of {{ review.song_name }} by {{ review.artist_name }}?
+                                    Are you sure you want to delete your review of {{ review.song_name }} by
+                                    {{ review.artist_name }}?
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Go back</button>
-                                    <a href="{{ url_for('delete_review', review_id=review._id) }}"><button type="button" class="btn btn-danger">Delete Review</button></a>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Go
+                                        back</button>
+                                    <a href="{{ url_for('delete_review', review_id=review._id) }}"><button type="button"
+                                            class="btn btn-danger">Delete Review</button></a>
                                 </div>
                             </div>
                         </div>
@@ -79,9 +86,11 @@
         </div>
         {% endfor %}
         {% else %}
+        <!-- Message if no reviews are found -->
         <div class="col-lg-10 text-center">
             <p>Looks like you haven't posted any reviews yet.</p>
-            <a href="{{ url_for('new_review') }}"><button type="button" class="btn btn-secondary">Post your first review</button></a>
+            <a href="{{ url_for('new_review') }}"><button type="button" class="btn btn-secondary">Post your first
+                    review</button></a>
         </div>
         {% endif %}
     </div>

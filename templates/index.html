@@ -1,28 +1,35 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!-- Welcome image -->
 <div class="p-4 mb-4 home-main-image text-center">
     <div class="container-fluid home-main-image-text">
-      <h1>Welcome, Rocker!</h1>
-      {% if session.user %}
-      <a href="{{ url_for('get_reviews') }}"><button class="btn btn-secondary btn-lg mt-2" type="button">Browse Reviews</button></a>
-      {% else %}
-      <a href="{{ url_for('register') }}"><button class="btn btn-secondary btn-lg mt-2" type="button">Register Here</button></a>
-      <p class="have-account">Have an account? <a href="{{ url_for('login') }}"><strong>Login here</strong></a></p>
-      {% endif %}
+        <h1>Welcome, Rocker!</h1>
+        {% if session.user %}
+        <a href="{{ url_for('get_reviews') }}"><button class="btn btn-secondary btn-lg mt-2" type="button">Browse
+                Reviews</button></a>
+        {% else %}
+        <a href="{{ url_for('register') }}"><button class="btn btn-secondary btn-lg mt-2" type="button">Register
+                Here</button></a>
+        <p class="have-account">Have an account? <a href="{{ url_for('login') }}"><strong>Login here</strong></a></p>
+        {% endif %}
     </div>
 </div>
 
 <div class="container">
+    <!-- Riff Review explanation -->
     <div class="row mb-3 justify-content-center">
         <div class="col-lg-10 text-center">
             <h2>What is Riff Review?</h2>
-            <p class="text-center">Riff Review is a friendly, online community where you can share your Rock/Metal music reviews, suggestions
+            <p class="text-center">Riff Review is a friendly, online community where you can share your Rock/Metal music
+                reviews, suggestions
                 and criticisms. Have something to say about a particular song? This is the place to be!</p>
-            <p>To view and create reviews, you'll need to register an account above. Then you'll unlock the full features of the site.</p>
+            <p>To view and create reviews, you'll need to register an account above. Then you'll unlock the full
+                features of the site.</p>
         </div>
     </div>
     <hr>
+    <!-- Three random reviews from database -->
     <div class="container mt-4">
         <div class="row mb-3 justify-content-center">
             <div class="text-center">
@@ -71,7 +78,8 @@
         <div class="col-lg-10 text-center">
             <p>No reviews have been posted yet.</p>
             {% if session.user %}
-            <a href="{{ url_for('new_review') }}"><button type="button" class="btn btn-secondary">Post the first review</button></a>
+            <a href="{{ url_for('new_review') }}"><button type="button" class="btn btn-secondary">Post the first
+                    review</button></a>
             {% endif %}
         </div>
         {% endif %}

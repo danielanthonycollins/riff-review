@@ -7,6 +7,7 @@
             <h1>Review details</h1>
         </div>
     </div>
+    <!-- Review details -->
     <div class="container mb-5 pb-3 pt-3" id="single-review-container">
         <div class="row justify-content-center">
             <div class="col text-center">
@@ -55,30 +56,34 @@
         {% endif %}
         <div class="row justify-content-center mt-2">
             <div class="col text-center">
-                <a href="{{ url_for('get_reviews') }}"><button type="button" class="btn btn-secondary">Back to Reviews</button></a>
+                <a href="{{ url_for('get_reviews') }}"><button type="button" class="btn btn-secondary">Back to
+                        Reviews</button></a>
+                <!-- Edit/delete buttons if review belongs to user -->
                 {% if session.user|lower == review.review_by|lower %}
-                    <a href="{{ url_for('edit_review', review_id=review._id) }}"><button type="button" class="btn btn-success">Edit Review</button></a>
-                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete Review</button>
-                    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModal"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="deleteModalTitle">Please confirm</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Are you sure you want to delete your review of {{ review.song_name }} by {{ review.artist_name }}?
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Go back</button>
-                                    <a href="{{ url_for('delete_review', review_id=review._id) }}"><button type="button" class="btn btn-danger">Delete Review</button></a>
-                                </div>
+                <a href="{{ url_for('edit_review', review_id=review._id) }}"><button type="button"
+                        class="btn btn-success">Edit Review</button></a>
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete
+                    Review</button>
+                <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModal" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="deleteModalTitle">Please confirm</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Are you sure you want to delete your review of {{ review.song_name }} by
+                                {{ review.artist_name }}?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Go back</button>
+                                <a href="{{ url_for('delete_review', review_id=review._id) }}"><button type="button"
+                                        class="btn btn-danger">Delete Review</button></a>
                             </div>
                         </div>
                     </div>
+                </div>
                 {% endif %}
             </div>
         </div>

@@ -8,6 +8,7 @@
             <hr>
         </div>
     </div>
+    <!-- Review search by song or artist name -->
     <form action="{{ url_for('search') }}" method="POST">
         <div class="mb-3 row justify-content-center">
             <div class="col-md text-center mb-1">
@@ -23,11 +24,13 @@
                 <div class="col-md text-center">
                     <button type="submit" class="btn btn-secondary mx-2">Search <i
                             class="fa-solid fa-magnifying-glass ps-1"></i></button>
-                    <a href="{{ url_for('get_reviews') }}"><button type="button" class="btn btn-danger">Reset <i class="fa-solid fa-arrow-rotate-right"></i></button></a>
+                    <a href="{{ url_for('get_reviews') }}"><button type="button" class="btn btn-danger">Reset <i
+                                class="fa-solid fa-arrow-rotate-right"></i></button></a>
                 </div>
             </div>
         </div>
     </form>
+    <!-- Show all reviews -->
     <div class="row mb-5 justify-content-center">
         {% if reviews|length != 0 %}
         {% for review in reviews %}
@@ -60,6 +63,7 @@
                     <a href="{{ url_for('review_details', review_id=review._id) }}" class="btn btn-secondary">Read
                         more</a>
                     {% if session.user|lower == review.review_by|lower %}
+                    <!-- Show edit/delete buttons if review belongs to user -->
                     <a href="{{ url_for('edit_review', review_id=review._id) }}"><button type="button"
                             class="btn btn-success">Edit</button></a>
                     <button type="button" class="btn btn-danger" data-bs-toggle="modal"
@@ -92,6 +96,7 @@
         </div>
         {% endfor %}
         {% else %}
+        <!-- Message when no reviews are found -->
         <div class="col-lg-10 text-center">
             <p>No reviews could be found.</p>
             {% if session.user %}
