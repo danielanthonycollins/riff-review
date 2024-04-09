@@ -58,7 +58,9 @@ Riff Review is an online application for rock and metal music lovers to read and
 
 ### **Wireframes**
 
-Home Page (Desktop, Tablet & Mobile)
+Wireframes are all based on a central responsive design using bootstrap, so only desktop wireframes have been provided. On mobile and tablet, all features will still be present, with a 'wrapping' effect suited to the screen size. On smaller devices, the navigation links will be stored in a collapsible 'burger' icon.
+
+Home Page
 
 ![Home Page Wireframe](###)
 
@@ -182,6 +184,7 @@ Tools:
 - Flask
 - Bootstrap
 - Fontawesome
+- Google Fonts
 
 ## **Credits**
 
