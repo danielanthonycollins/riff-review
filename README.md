@@ -62,7 +62,35 @@ Wireframes are all based on a central responsive design using bootstrap, so only
 
 Home Page
 
-![Home Page Wireframe](###)
+![Home Page Wireframe](documentation/wireframes/homewireframerr.png)
+
+Reviews Page
+
+![Reviews Page Wireframe](documentation/wireframes/reviewswireframerr.png)
+
+New Review Page
+
+![New Review Page Wireframe](documentation/wireframes/newreviewwireframerr.png)
+
+Profile Page
+
+![Profile Page Wireframe](documentation/wireframes/profilewireframerr.png)
+
+Edit Review Page
+
+![Edit Review Page Wireframe](documentation/wireframes/editreviewwireframerr.png)
+
+Review Details Page
+
+![Review Details Page Wireframe](documentation/wireframes/reviewdetailswireframerr.png)
+
+Login Page
+
+![Login Page Wireframe](documentation/wireframes/loginwireframerr.png)
+
+Register Page
+
+![Register Page Wireframe](documentation/wireframes/registerwireframerr.png)
 
 ### **Color Scheme**
 
@@ -156,16 +184,10 @@ index.html Desktop Lighthouse results
 
 I found the following bugs during the development process:
 
-- Heading
-  - Problem: 
-  - Cause: 
-  - Solution: 
-
-Eny/Env spelling error resulting in MONGO URI not being found when trying to run the app from gitpod, even though it was working on Heroku.
-
-Yes/No bug where when editting a review only the selected option was showing, so you couldn't fix it. Just added the other option to the if and else statement and reversed the selected attribute for each instance.
-
-
+- Unable to run project via IDE
+  - Problem: MONGO URI is not found when trying to run the app from IDE
+  - Cause: Typo error, IDE was trying to find eny.py instead of env.py
+  - Solution: Typo was corrected and the MONGO URI was found, application was able to run from the IDE
 
 ---
 
