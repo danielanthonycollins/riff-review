@@ -44,7 +44,7 @@ a {
     font-size: 1.2rem
 }
 
-/* Header and nav styles */
+/* Header, logo and nav styles */
 
 header {
     margin-bottom: 1.5rem;
@@ -52,6 +52,11 @@ header {
 
 .justify-nav {
     justify-content: end;
+}
+
+#logo {
+    height: 50px;
+    width: auto;
 }
 
 /* Home page styles */
