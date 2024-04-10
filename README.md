@@ -58,7 +58,7 @@ Riff Review is an online application for rock and metal music lovers to read and
 
 ### **Wireframes**
 
-Wireframes are all based on a central responsive design using bootstrap, so only desktop wireframes have been provided. On mobile and tablet, all features will still be present, with a 'wrapping' effect suited to the screen size. On smaller devices, the navigation links will be stored in a collapsible 'burger' icon.
+Wireframes are all based on a central responsive design using bootstrap, so only desktop wireframes have been provided. On mobile and tablet, all features will still be present, with a 'wrapping' effect suited to the screen size. On smaller devices, the navigation links will be stored in a collapsible 'burger' icon. Click on the relevant pages below to reveal the wireframes.
 
 <details>
 <summary>Home Page</summary>
@@ -144,9 +144,9 @@ Responsiveness was checked and worked as intended with the following browsers an
 
 - Large (15" MacBook Pro Laptop):
 
-  - Chrome 
-  - Firefox 
-  - Safari 
+  - Chrome (Version 123.0.6312.107 Official Build x86_64)
+  - Firefox (Version 124.0.1 64-bit)
+  - Safari (Version 17.4.1 17618.1.15.111.8, 17618)
 
 - Medium (10.9" iPad):
 
@@ -156,9 +156,9 @@ Responsiveness was checked and worked as intended with the following browsers an
 
 - Small (6" iPhone 13):
 
-  - Chrome (123.0.6312.52)
+  - Chrome (Version 123.0.6312.52)
   - Safari
-  - Firefox (124.3 40336)
+  - Firefox (Version 124.3 40336)
 
 DevTools was also used to check the responsiveness at various screen sizes and devices from the list of devices available. All were fully responsive and caused no issues. 
 
