@@ -189,6 +189,11 @@ I found the following bugs during the development process:
   - Cause: Typo error, IDE was trying to find eny.py instead of env.py
   - Solution: Typo was corrected and the MONGO URI was found, application was able to run from the IDE
 
+- Review title input font size too big
+  - Problem: When creating or editting a review, the text typed/showing in the input field was very big.
+  - Cause: The ID linked to these fields was styled in the application CSS file with a larger font size, which is applicable on the review details page, but not in the forms on the new review or edit review pages.
+  - Solution: The relevant ID name was changed so it was specific to the review details page only, and not the others.
+
 ---
 
 ## **Deployment**
