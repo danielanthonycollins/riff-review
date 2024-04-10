@@ -136,6 +136,7 @@ header {
 .card-footer {
     background-color: #fff;
     border-top: none;
+    display: flex;
 }
 
 /* Footer styling */
