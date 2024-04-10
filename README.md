@@ -229,11 +229,16 @@ Special thanks to my mentor Richard Wells for his excellent advice and support t
 
 ### **Content**
 
-https://www.30secondsofcode.org/css/s/footer-at-the-bottom/#:~:text=You%20can%20use%20flexbox%20to,and%20flex%2Ddirection%3A%20column%20. - Sticky footer
+The following link helped me to stick the footer to the bottom of the page at all times, even if the body content was short:
 
-https://stackoverflow.com/questions/46877347/how-to-align-div-to-bottom-inside-div-with-bootstrap - Helped to keep Author at bottom of relevant review cards div they are nested in at all times.
+https://www.30secondsofcode.org/css/s/footer-at-the-bottom/#:~:text=You%20can%20use%20flexbox%20to,and%20flex%2Ddirection%3A%20column%20
 
-Help with Regex password validation
+The following link helped me to keep 'Author' at bottom of the relevant review card div they are nested in at all times:
+
+https://stackoverflow.com/questions/46877347/how-to-align-div-to-bottom-inside-div-with-bootstrap
+
+The following link helped me with the register Regex password validation as I wanted to ensure certain parameteres were met before the user could register:
+
 https://stackoverflow.com/questions/19605150/regex-for-password-must-contain-at-least-eight-characters-at-least-one-number-a
 
 ### **Media**
