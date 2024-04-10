@@ -128,9 +128,9 @@ Responsiveness was checked and worked as intended with the following browsers an
 
 - Large (15" MacBook Pro Laptop):
 
-  - Chrome (120.0.6099.109 Official Build x86_64)
-  - Firefox (121.0 64-bit)
-  - Safari (Version 17.2 17617.1.17.11.11, 17617)
+  - Chrome 
+  - Firefox 
+  - Safari 
 
 - Medium (10.9" iPad):
 
@@ -140,9 +140,9 @@ Responsiveness was checked and worked as intended with the following browsers an
 
 - Small (6" iPhone 13):
 
-  - Chrome (120.0.6099.119)
+  - Chrome (123.0.6312.52)
   - Safari
-  - Firefox (120.4 36613)
+  - Firefox (124.3 40336)
 
 DevTools was also used to check the responsiveness at various screen sizes and devices from the list of devices available. All were fully responsive and caused no issues. 
 
