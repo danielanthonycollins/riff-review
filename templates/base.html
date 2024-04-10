@@ -82,23 +82,20 @@
     </nav>
   </header>
 
-
-  <section>
-    <!-- Flash messages -->
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-    {% for message in messages %}
-    <div class="container-fluid">
-      <div class="row flashes-container">
-        <div class="col">
-          <p class="text-center flash-text">{{ message }}</p>
-        </div>
+  <!-- Flash messages -->
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  {% for message in messages %}
+  <div class="container-fluid">
+    <div class="row flashes-container">
+      <div class="col">
+        <p class="text-center flash-text">{{ message }}</p>
       </div>
     </div>
-    {% endfor %}
-    {% endif %}
-    {% endwith %}
-  </section>
+  </div>
+  {% endfor %}
+  {% endif %}
+  {% endwith %}
 
   <!-- All block content -->
   {% block content %}
