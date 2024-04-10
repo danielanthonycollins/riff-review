@@ -60,37 +60,53 @@ Riff Review is an online application for rock and metal music lovers to read and
 
 Wireframes are all based on a central responsive design using bootstrap, so only desktop wireframes have been provided. On mobile and tablet, all features will still be present, with a 'wrapping' effect suited to the screen size. On smaller devices, the navigation links will be stored in a collapsible 'burger' icon.
 
-Home Page
-
-![Home Page Wireframe](documentation/wireframes/homewireframerr.png)
-
-Reviews Page
-
-![Reviews Page Wireframe](documentation/wireframes/reviewswireframerr.png)
-
-New Review Page
-
-![New Review Page Wireframe](documentation/wireframes/newreviewwireframerr.png)
-
-Profile Page
-
-![Profile Page Wireframe](documentation/wireframes/profilewireframerr.png)
-
-Edit Review Page
-
-![Edit Review Page Wireframe](documentation/wireframes/editreviewwireframerr.png)
-
-Review Details Page
-
-![Review Details Page Wireframe](documentation/wireframes/reviewdetailswireframerr.png)
-
-Login Page
-
-![Login Page Wireframe](documentation/wireframes/loginwireframerr.png)
-
-Register Page
-
-![Register Page Wireframe](documentation/wireframes/registerwireframerr.png)
+<details>
+<summary>Home Page</summary>
+<br>
+<img alt="Home page wireframe" src="documentation/wireframes/homewireframerr.png">
+</details>
+<br>
+<details>
+<summary>Reviews Page</summary>
+<br>
+<img alt="Reviews page wireframe" src="documentation/wireframes/reviewswireframerr.png">
+</details>
+<br>
+<details>
+<summary>New Review Page</summary>
+<br>
+<img alt="New review page wireframe" src="documentation/wireframes/newreviewwireframerr.png">
+</details>
+<br>
+<details>
+<summary>Profile Page</summary>
+<br>
+<img alt="Profile page wireframe" src="documentation/wireframes/profilewireframerr.png">
+</details>
+<br>
+<details>
+<summary>Edit Review Page</summary>
+<br>
+<img alt="Edit review page wireframe" src="documentation/wireframes/editreviewwireframerr.png">
+</details>
+<br>
+<details>
+<summary>Review Details Page</summary>
+<br>
+<img alt="Review details page wireframe" src="documentation/wireframes/reviewdetailswireframerr.png">
+</details>
+<br>
+<details>
+<summary>Login Page</summary>
+<br>
+<img alt="Login page wireframe" src="documentation/wireframes/loginwireframerr.png">
+</details>
+<br>
+<details>
+<summary>Register Page</summary>
+<br>
+<img alt="Register page wireframe" src="documentation/wireframes/registerwireframerr.png">
+</details>
 
 ### **Color Scheme**
 
