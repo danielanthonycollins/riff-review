@@ -64,10 +64,7 @@
                         more</a>
                     {% if session.user|lower == review.review_by|lower %}
                     <!-- Show edit/delete buttons if review belongs to user -->
-                    <form action="{{ url_for('edit_review', review_id=review._id) }}" method="GET">
-                        <button type="submit"
-                            class="btn btn-success me-1">Edit</button>
-                    </form>
+                    <a href="{{ url_for('edit_review', review_id=review._id) }}" class="btn btn-success me-1">Edit</a>
                     <button type="button" class="btn btn-danger" data-bs-toggle="modal"
                         data-bs-target="#deleteModal">Delete</button>
                     <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModal"
@@ -86,10 +83,7 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Go
                                         back</button>
-                                    <form action="{{ url_for('delete_review', review_id=review._id) }}" method="GET">
-                                        <button type="submit"
-                                            class="btn btn-danger">Delete Review</button>
-                                    </form>
+                                    <a href="{{ url_for('delete_review', review_id=review._id) }}" class="btn btn-danger">Delete Review</a>
                                 </div>
                             </div>
                         </div>
@@ -104,8 +98,7 @@
         <div class="col-lg-10 text-center">
             <p>No reviews could be found.</p>
             {% if session.user %}
-            <a href="{{ url_for('new_review') }}"><button type="button" class="btn btn-secondary">Post the first
-                    one</button></a>
+            <a href="{{ url_for('new_review') }}" class="btn btn-secondary">Post the first</a>
             {% endif %}
         </div>
         {% endif %}

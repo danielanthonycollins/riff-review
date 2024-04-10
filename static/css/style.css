@@ -71,6 +71,10 @@ header {
     margin-top: -1.5rem;
 }
 
+.remove-button-shadow {
+    text-shadow: none;
+}
+
 .home-main-image-text {
     padding: 1.5rem 0;
 }
