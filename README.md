@@ -122,9 +122,9 @@ Responsiveness was checked and worked as intended with the following browsers an
 
 - Extra Large (27" Mac Desktop):
 
-  - Chrome (120.0.6099.109 Official Build x86_64)
-  - Safari (Version 17.2.1 19617.1.17.11.12)
-  - Firefox (Version 121.0 64-bit)
+  - Chrome (Version 123.0.6312.106 Official Build x86_64)
+  - Safari (Version 17.4.1 19618.1.15.11.14)
+  - Firefox (Version 123.0 64-bit)
 
 - Large (15" MacBook Pro Laptop):
 
