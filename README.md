@@ -236,7 +236,7 @@ DevTools was also used to check the responsiveness at various screen sizes and d
 
 ### **Functionality**
 
-Manual testing as a logged <strong>out</strong> user
+Manual testing as a logged <strong>OUT</strong> user
 
 Feature/Test                                            | Expected Outcome.                                                                                                                                                  | Result |
 | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
@@ -253,6 +253,8 @@ Feature/Test                                            | Expected Outcome.     
 | Register Page, register form                          | When user completes all fields following the instructions given and clicks register, automatically logged in shown profile page                                    | Pass  |
 | Register Page, register form                          | If user doesn't complete all required fields, or follow instructions given, or if passwords don't match, flash message appears to explain and they must try again  | Pass  |
 | Register Page, login link                             | Redirect to the login page                                                                                                                                         | Pass  |
+
+Manual testing as a logged <strong>IN</strong> user
 
 ### **Validators**
 
