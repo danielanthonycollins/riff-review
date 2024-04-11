@@ -168,9 +168,67 @@ DevTools was also used to check the responsiveness at various screen sizes and d
 
 ### **Validators**
 
-index.html HTML Validator
+HTML Validators
 
-![index.html HTML Validator](###)
+<details>
+<summary>Home Page</summary>
+<br>
+<img alt="Home page HTML validator" src="documentation/html-validators/homepagehtmlvalidator.png">
+</details>
+<br>
+<details>
+<summary>Reviews Page</summary>
+<br>
+<img alt="Reviews page HTML validator" src="documentation/html-validators/reviewspagehtmlvalidator.png">
+</details>
+<br>
+<details>
+<summary>New Review Page</summary>
+<br>
+<img alt="New Review page HTML validator" src="documentation/html-validators/newreviewpagehtmlvalidator.png">
+</details>
+<br>
+<details>
+<summary>Profile Page</summary>
+<br>
+<img alt="Profile page HTML validator" src="documentation/html-validators/profilepagehtmlvalidator.png">
+</details>
+<br>
+<details>
+<summary>Edit Review Page</summary>
+<br>
+<img alt="Edit Review page HTML validator" src="documentation/html-validators/editreviewpagehtmlvalidator.png">
+</details>
+<br>
+<details>
+<summary>Review Details Page</summary>
+<br>
+<img alt="Review Details page HTML validator" src="documentation/html-validators/reviewdetailspagehtmlvalidator.png">
+</details>
+<br>
+<details>
+<summary>Login Page</summary>
+<br>
+<img alt="Login page HTML validator" src="documentation/html-validators/loginpagehtmlvalidator.png">
+</details>
+<br>
+<details>
+<summary>Register Page</summary>
+<br>
+<img alt="Register page HTML validator" src="documentation/html-validators/registerpagehtmlvalidator.png">
+</details>
+<br>
+<details>
+<summary>404 Page</summary>
+<br>
+<img alt="404 page HTML validator" src="documentation/html-validators/404pagehtmlvalidator.png">
+</details>
+<br>
+<details>
+<summary>500 Page</summary>
+<br>
+<img alt="500 page HTML validator" src="documentation/html-validators/500pagehtmlvalidator.png">
+</details>
 
 ### **Lighthouse**
 
