@@ -168,7 +168,7 @@ DevTools was also used to check the responsiveness at various screen sizes and d
 
 ### **Validators**
 
-HTML Validators
+<strong>HTML Validators</strong>
 
 <details>
 <summary>Home Page</summary>
@@ -229,12 +229,138 @@ HTML Validators
 <br>
 <img alt="500 page HTML validator" src="documentation/html-validators/500pagehtmlvalidator.png">
 </details>
+<br>
+
+<strong>CSS Validator</strong>
+
+style.css result
+
+![style.css validator result](documentation/css-validator/cssvalidator.png)
+
+<strong>JS Hint</strong>
+
+script.js result. Warnings were ignored as they were simply suggesting arrow functions are only available in ES6. The undefined/unused variables were also ignored as this code is being used by bootstrap to enable tooltips on the front end.
+
+![script.js validator result](documentation/js-validator/jsvalidator.png)
+
+<strong>CI Python Linter</strong>
+
+app.py result
+
+![app.py linter result](documentation/python-validator/pythonlinter.png)
 
 ### **Lighthouse**
 
-index.html Desktop Lighthouse results
+<details>
+<summary>Home Page Desktop</summary>
+<br>
+<img alt="Home page desktop lighthouse results" src="documentation/lighthouse/homedesktoplighthouse.png">
+</details>
+<br>
 
-![index.html Desktop Lighthouse results](###)
+<details>
+<summary>Home Page Mobile</summary>
+<br>
+<img alt="Home page mobile lighthouse results" src="documentation/lighthouse/homemobilelighthouse.png">
+</details>
+<br>
+
+<details>
+<summary>Reviews Page Desktop</summary>
+<br>
+<img alt="Reviews page desktop lighthouse results" src="documentation/lighthouse/reviewsdesktoplighthouse.png">
+</details>
+<br>
+
+<details>
+<summary>Reviews Page Mobile</summary>
+<br>
+<img alt="Reviews page mobile lighthouse results" src="documentation/lighthouse/reviewsmobilelighthouse.png">
+</details>
+<br>
+
+<details>
+<summary>New Review Page Desktop</summary>
+<br>
+<img alt="New Review page desktop lighthouse results" src="documentation/lighthouse/newreviewdesktoplighthouse.png">
+</details>
+<br>
+
+<details>
+<summary>New Review Page Mobile</summary>
+<br>
+<img alt="New Review page mobile lighthouse results" src="documentation/lighthouse/newreviewmobilelighthouse.png">
+</details>
+<br>
+
+<details>
+<summary>Profile Page Desktop</summary>
+<br>
+<img alt="Profile page desktop lighthouse results" src="documentation/lighthouse/profiledesktoplighthouse.png">
+</details>
+<br>
+
+<details>
+<summary>Profile Page Mobile</summary>
+<br>
+<img alt="Profile page mobile lighthouse results" src="documentation/lighthouse/profilemobilelighthouse.png">
+</details>
+<br>
+
+<details>
+<summary>Edit Review Page Desktop</summary>
+<br>
+<img alt="Edit Review page desktop lighthouse results" src="documentation/lighthouse/editreviewdesktoplighthouse.png">
+</details>
+<br>
+
+<details>
+<summary>Edit Review Page Mobile</summary>
+<br>
+<img alt="Edit Review page mobile lighthouse results" src="documentation/lighthouse/editreviewmobilelighthouse.png">
+</details>
+<br>
+
+<details>
+<summary>Review Details Page Desktop</summary>
+<br>
+<img alt="Review Details page desktop lighthouse results" src="documentation/lighthouse/reviewdetailsdesktoplighthouse.png">
+</details>
+<br>
+
+<details>
+<summary>Review Details Page Mobile</summary>
+<br>
+<img alt="Review Details page mobile lighthouse results" src="documentation/lighthouse/reviewdetailsmobilelighthouse.png">
+</details>
+<br>
+
+<details>
+<summary>Login Page Desktop</summary>
+<br>
+<img alt="Login page desktop lighthouse results" src="documentation/lighthouse/logindesktoplighthouse.png">
+</details>
+<br>
+
+<details>
+<summary>Login Page Mobile</summary>
+<br>
+<img alt="Login page mobile lighthouse results" src="documentation/lighthouse/loginmobilelighthouse.png">
+</details>
+<br>
+
+<details>
+<summary>Register Page Desktop</summary>
+<br>
+<img alt="Register page desktop lighthouse results" src="documentation/lighthouse/registerdesktoplighthouse.png">
+</details>
+<br>
+
+<details>
+<summary>Register Page Mobile</summary>
+<br>
+<img alt="Register page mobile lighthouse results" src="documentation/lighthouse/registermobilelighthouse.png">
+</details>
 
 ### **Testing user stories**
 
