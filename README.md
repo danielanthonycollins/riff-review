@@ -118,11 +118,83 @@ I decided to import the Oswald font from Google Fonts as I felt it had a rock vi
 
 ## **Features**
 
-Home Page
+<strong>Features common to all pages</strong>
 
-![Home page preview](###)
+Navigation - The navbar appears on every page of the application. However, the links shown in the image only appear when the user is logged in. If the user is not logged in, they will see Home, Login and Register. The nav bar is fully responsive and collapses inside of a 'burger' icon on smaller devices.
 
+![Navigation](documentation/features/navbar.png)
 
+Footer - The footer sticks to the bottom of the page, regardless of the pages height, so on shorter pages, there is no white gap at the bottom of the page. It includes a contact email address if the user wishes to get in touch with Riff Review, and also links to their social media accounts. The colour scheme is consistent with the navbar to provide an asthetic look. If the user wishes to logout, they are prompted with a confirmation modal to ensure they didn't press it by mistake.
+
+![Footer](documentation/features/footer.png)
+
+Flash messages - Flash messages, such as 'You are logged out. Bye for now!' and various others are set to appear in the same place on every page (only when required/prompted via the app.py file). They appear above the first main heading of the page, below the nav bar, to keep consistency.
+
+![Flash messages](documentation/features/flashmessages.png)
+
+<strong>Home Page</strong>
+
+Main guitar image - This is the first feature the user sees when they enter the website. It immediately fits the theme of the website, as it's someone playing a guitar. If the user isn't logged in, they see the register button and also a login prompt below if they do have an account. If the user is logged in already, the button changes to 'Browse Reviews' and the login prompt is removed.
+
+![Main guitar image](documentation/features/guitarimage.png)
+
+Home welcome text - This is the next section the user sees on the home page. It's a basic explanation of the website with some instructions how to get the most out of it. It also nicely separates the large image above from the recent reviews cards below it.
+
+![Home welcome text](documentation/features/homewelcome.png)
+
+Recent reviews - This feature displays three randomly selected reviews stored in the database. If the user is logged in, they can click the read more button to be taken to the specifc page of that review, however if the user is not logged in, the button does not appear, as this section is for registered users only. If there are no reviews found in the database, a message displays to tell the user no reviews have been found.
+
+![Recent reviews](documentation/features/homerecentreviews.png)
+
+<strong>Reviews Page</strong>
+
+Search box - This feature allows users to search for songs or artists, rather than scrolling through all of the reviews. The feature includes a reset button, so if the user has searched for something but wishes to reset the process, they are returned to the reviews page where they started.
+
+![Search box](documentation/features/reviewssearch.png)
+
+All reviews - Below the search box, all reviews found in the database are neatly displayed. If no reviews can be found, a message is displayed to inform the user, with a prompt to be the first one to post a review. If a review belongs to a particular user, they will see the edit and delete buttons, otherwise they will only see read more, which directs them to the page for that spefic review. If the review content is above 90 characters, the preview is capped at this amount with trailing dots, to show there is more to read by clicking on read more. If the content is below 90 characters, the content is shown in the preview as normal. The ! tooltip is displayed if a user selects that the song contains explicit language when creating their review. When hovered over, it displays the relevant message to warn the user. If the user wishes to delete a review, they are prompted with a confirmation modal to ensure they didn't press it by mistake.
+
+![All reviews](documentation/features/allreviews.png)
+
+<strong>New Review Page</strong>
+
+New Review form - This form is used to create a new review. The genre is a dropdown, which is populated by the genres pulled from the database. The song name, artist name and review title input fields include validation to allow a max length of 60 characters as this is long enough to describe the song, artist and provide a short & sharp title. Without it, the user could enter unlimated characters which could make the other pages messy where review previews are shown. An info message was only incuded for the review title explaining this because people are more likely to use more than 60 characters for a title than the song and artist name. I also found that too many instruction messages was too much on one page. If the user chooses that a song does include explicit language, a tooltip / warning appears in the relevant place with the review to inform the other users reading it. The review content is a large text box, where the user can type as much as they want as this is cut down on the review previews elsewhere on the website, however it's only shown at full length on the reviews specific page, which has plenty of room for an endless amount of content. I included a lightnight icon with the submit button to keep with the rock/metal theme.
+
+![New review](documentation/features/newreview.png)
+
+<strong>Profile Page</strong>
+
+Profile welcome message - This is a basic welcome message for the user when logged in and viewing their profile. The profile page is where the user lands when they register or login to their account. The message is populated with their username to give a more personal touch.
+
+![Profile welcome message](documentation/features/welcomeprofile.png)
+
+Profile reviews - This is where any reviews the particular user has created are displayed. They are prompted with the same read, edit and delete buttons for each review as they see on the main reviews page. If they haven't created any reviews yet, they are shown a message to confirm this along with a prompt to create their first review.
+
+![Profile reviews](documentation/features/profilereviews.png)
+
+<strong>Edit Review Page</strong>
+
+Edit review form - This form is a replica of the new review form, however it is populated with the existing review details which can be altered as needed. To save the changes, the user clicked edit review and the website and database are updated simultaneously. If they change their mind and wish to go back, there is a button for this also which takes them back to the main reviews page. The app.py file includes logic to stop users trying to hack into other users reviews that don't belong to them. If the user in session doesn't match the user who created the review, a flash message appears to tell them it is not their review and they are unable to edit it.
+
+![Edit review](documentation/features/editreview.png)
+
+<strong>Review Details Page</strong>
+
+Review details - This is the page where the specific review selected is displayed in full. It includes all of the relevant details filled in when creating a review. If the user chooses that the song includes explicit language a red warning alert appears at the bottom which can't be missed. If the review belongs to the user logged in, they are also shown the edit and delte buttons. Otherwise, the user only sees the back to reviews button, for when they are done reading.
+
+![Review details](documentation/features/reviewdetails.png)
+
+<strong>Login Page</strong>
+
+Login form - This form allows the user to login to their account. If they haven't created one, a prompt to register an account is included below. They must enter a username and password that matches that of a record in the database or they are shown a flash message to tell them the details are incorrect. Once the user is logged in, they are in session which prompts the changes and features to appear throughout the site mentioned above.
+
+![Login](documentation/features/login.png)
+
+<strong>Register Page</strong>
+
+Register form - This form allows the the user to register for an account if they don't already have one. If they already have an account, a prompt is displayed underneath the form where they can login. When registering for an account, the user must follow the validation requirements, clearly explained underneath each input. If they don't, they are told to follow the requirements when they try to register. The form includes a confirm password input, and the website compares the two to ensure they are the same before the user is registered. If they are not the same, they are told this is the case and that they need to try again.
+
+![Register](documentation/features/register.png)
 
 ## **Future Enhancements**
 
@@ -164,7 +236,23 @@ DevTools was also used to check the responsiveness at various screen sizes and d
 
 ### **Functionality**
 
+Manual testing as a logged <strong>out</strong> user
 
+Feature/Test                                            | Expected Outcome.                                                                                                                                                  | Result |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
+| Navbar layout                                         | Only able to see and click home, login and register                                                                                                                | Pass  |
+| Logo in Navbar                                        | Redirect to Homepage                                                                                                                                               | Pass  |
+| Nav links                                             | Redirect to the relevant pages                                                                                                                                     | Pass  |
+| Home page, register here button                       | Redirect to the register page                                                                                                                                      | Pass  |
+| Home page, recent reviews                             | To change each time on refresh, if more than 3 reviews are found                                                                                                   | Pass  |
+| Footer, email link                                    | Start a new email to Riff Review                                                                                                                                   | Pass  |
+| Footer, social media links                            | Redirect to relevant social media pages                                                                                                                            | Pass  |
+| Login Page, login form                                | When user account exists in database and details entered match, logs user in and shows profile page                                                                | Pass  |
+| Login Page, login form                                | When user details don't match any user accounts stored in the database, flash message should appear to explain                                                     | Pass  |
+| Login Page, register link                             | Redirect to the register page                                                                                                                                      | Pass  |
+| Register Page, register form                          | When user completes all fields following the instructions given and clicks register, automatically logged in shown profile page                                    | Pass  |
+| Register Page, register form                          | If user doesn't complete all required fields, or follow instructions given, or if passwords don't match, flash message appears to explain and they must try again  | Pass  |
+| Register Page, login link                             | Redirect to the login page                                                                                                                                         | Pass  |
 
 ### **Validators**
 
