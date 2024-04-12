@@ -49,14 +49,20 @@ Riff Review is an online application for rock and metal music lovers to read and
 
 - As a user, I want the site to be easy to use.
 - As a user, I want to the site to be responsive.
-- As a user, I want the ability to post, edit and delete reviews.
 - As a user, I want the ability to read reviews posted by other users.
+- As a user, I want the ability to post new reviews.
+- As a user, I want the ability to read my own reviews.
+- As a user, I want the ability to edit my own reviews.
+- As a user, I want the ability to delete my own reviews.
+- As a user, I want the ability to search for reviews by song or artist name.
+- As a user, I want the ability to create an account.
 
 ### **Site Aims**
 
 - Offer a simple to use application where users can create, read, edit and delete music reviews.
 - Offer the ability to register an account, allowing the user to see and manage their own reviews on a single page.
 - To keep the user informed as they create, edit and delete reviews with confirmation of each step.
+- To allow the user to search for reviews quickly and easily.
 
 ### **Wireframes**
 
@@ -464,13 +470,33 @@ app.py result
 
 **Achieved?**: Yes. The application has been designed and tested to be responsive on all devices.
 
-**User story 3**: As a user, I want the ability to post, edit and delete reviews.
-
-**Achieved?**: Yes. Once an account is made, users are given the ability to create a new review via the 'New Review' page. They can also edit and delete their own reviews, either via the 'Reviews' page or their 'Profile' page.
-
-**User story 4**: As a user, I want the ability to read reviews posted by other users.
+**User story 3**: As a user, I want the ability to read reviews posted by other users.
 
 **Achieved?**: Yes. Users are able to see three random reviews on the home page if they are not logged in. Once logged in, they can see all reviews on the 'Reviews' page.
+
+**User story 4**: As a user, I want the ability to post new reviews.
+
+**Achieved?**: Yes. Users are able to create new reviews which are posted to the website once they create an account.
+
+**User story 5**: As a user, I want the ability to read my own reviews.
+
+**Achieved?**: Yes. Once the user makes an account, they are provided with a unique profile page which displays any reviews linked to their account. They can also read their own reviews on the main reviews page.
+
+**User story 6**: As a user, I want the ability to edit my own reviews.
+
+**Achieved?**: Yes. The user is able to edit their own reviews via the edit button provided with their review, which is shown on all pages where their reviews exist, except the home page.
+
+**User story 7**: As a user, I want the ability to delete my own reviews.
+
+**Achieved?**: Yes. The user is able to delete their own reviews via the delete button provided with their review, which is shown on all pages where their reviews exist, except the home page. They are prompted with a modal to ensure they definitely want to delete the review and didn't click delete by mistake.
+
+**User story 8**: As a user, I want the ability to search for reviews by song or artist name.
+
+**Achieved?**: Yes. The main reviews page includes a search box where they are told they can search for songs or artists. All results are shown quickly. From there, if their search returns any results, they can read the review further via the read more button.
+
+**User story 9**: As a user, I want the ability to create an account.
+
+**Achieved?**: Yes. When a user first enters the website, they can register for an account via the register button in the navigation or the register button shown on the guitar image, which is one of the first sections they see.
 
 ## **Bugs**
 
