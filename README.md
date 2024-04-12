@@ -138,11 +138,11 @@ I decided to import the Oswald font from Google Fonts as I felt it had a rock vi
 
 <strong>Features common to all pages</strong>
 
-Navigation - The navbar appears on every page of the application. However, the links shown in the image only appear when the user is logged in. If the user is not logged in, they will see Home, Login and Register. The nav bar is fully responsive and collapses inside of a 'burger' icon on smaller devices.
+Navigation - The navbar appears on every page of the application. However, the links shown in the image only appear when the user is logged in. If the user is not logged in, they will see Home, Login and Register. The nav bar is fully responsive and collapses inside of a 'burger' icon on smaller devices. If the user wishes to logout, they are prompted with a confirmation modal to ensure they didn't press it by mistake.
 
 ![Navigation](documentation/features/navbar.png)
 
-Footer - The footer sticks to the bottom of the page, regardless of the pages height, so on shorter pages, there is no white gap at the bottom of the page. It includes a contact email address if the user wishes to get in touch with Riff Review, and also links to their social media accounts. The colour scheme is consistent with the navbar to provide an asthetic look. If the user wishes to logout, they are prompted with a confirmation modal to ensure they didn't press it by mistake.
+Footer - The footer sticks to the bottom of the page, regardless of the pages height, so on shorter pages, there is no white gap at the bottom of the page. It includes a contact email address if the user wishes to get in touch with Riff Review, and also links to their social media accounts. The colour scheme is consistent with the navbar to provide an asthetic look.
 
 ![Footer](documentation/features/footer.png)
 
