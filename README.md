@@ -40,8 +40,10 @@ Riff Review is an online application for rock and metal music lovers to read and
 
 ### **Target Audiences**
 
-- Rock/metal music fans
+- Users with an interest or love of rock/metal music
 - Users who attend rock/metal music festivals
+- Rock/metal fans looking for new music to listen to
+- Users thinking about getting into rock/metal music who don't know any of this kind of music
 
 ### **User Stories**
 
