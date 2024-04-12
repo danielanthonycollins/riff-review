@@ -226,7 +226,7 @@ def page_not_found(e):
 @app.errorhandler(500)
 def internal_error(err):
     """
-    With 500 error user is passed to a custom 404 page within the application.
+    With 500 error user is passed to a custom 500 page within the application.
     """
     return render_template('500.html'), 500
 
