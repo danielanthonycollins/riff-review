@@ -329,7 +329,7 @@ style.css result
 
 <strong>JS Hint</strong>
 
-script.js result. Warnings were ignored as they were simply suggesting arrow functions are only available in ES6. The undefined/unused variables were also ignored as this code is being used by bootstrap to enable tooltips on the front end.
+script.js result
 
 ![script.js validator result](documentation/js-validator/jsvalidator.png)
 
@@ -483,6 +483,12 @@ I found the following bugs during the development process:
   - Problem: When creating or editting a review, the text typed/showing in the input field was very big.
   - Cause: The ID linked to these fields was styled in the application CSS file with a larger font size, which is applicable on the review details page, but not in the forms on the new review or edit review pages.
   - Solution: The relevant ID name was changed so it was specific to the review details page only, and not the others.
+
+- Console error on all pages when testing
+  - Problem: Console log error as follows on all pages - Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')
+  - Cause: This was caused by the modal JS code in script.js added from Bootstrap
+  - Solution: After removing said modal JS code, the error disappeared and all modals still worked as expected.
+
 
 ---
 
