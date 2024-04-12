@@ -120,9 +120,10 @@ header {
 
 /* Styling for search text on reviews page */
 
-.search-text {
+#search-heading {
     font-size: 1.4rem;
     text-transform: uppercase;
+    margin-bottom: 0.5rem;
 }
 
 /* Adjust review title and review by sizing */
