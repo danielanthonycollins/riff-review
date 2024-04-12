@@ -5,6 +5,7 @@ from flask import (Flask, flash, render_template,
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+from functools import wraps
 if os.path.exists("env.py"):
     import env
 
@@ -16,6 +17,15 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
+
+def login_required(route_function):
+    @wraps(route_function)
+    def wrapper(*args, **kwargs):
+        if 'user' not in session:
+            flash('You need to be logged in to access this page.', 'warning')
+            return redirect(url_for('login'))
+        return route_function(*args, **kwargs)
+    return wrapper
 
 
 @app.route("/")
@@ -32,6 +42,7 @@ def index():
 
 
 @app.route("/get_reviews")
+@login_required
 def get_reviews():
     """
     Retrieves all reviews from the database to be displayed
@@ -42,6 +53,7 @@ def get_reviews():
 
 
 @app.route("/search", methods=["GET", "POST"])
+@login_required
 def search():
     """
     Gets what the user searched for and queries the database
@@ -53,6 +65,7 @@ def search():
 
 
 @app.route('/review_details/<string:review_id>')
+@login_required
 def review_details(review_id):
     """
     Gets the id of the review the user clicked on and redirects to
@@ -123,6 +136,7 @@ def login():
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
+@login_required
 def profile(username):
     """
     Retrieves username from the session and finds all reviews linked
@@ -151,6 +165,7 @@ def logout():
 
 
 @app.route("/new_review", methods=["GET", "POST"])
+@login_required
 def new_review():
     """
     Returns the new_review page and sends the review to the database
@@ -175,6 +190,7 @@ def new_review():
 
 
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
+@login_required
 def edit_review(review_id):
     """
     Takes the review id and returns the edit review page for that review.
@@ -201,6 +217,7 @@ def edit_review(review_id):
 
 
 @app.route("/delete_review/<review_id>")
+@login_required
 def delete_review(review_id):
     """
     Takes the review id and removes that specific review.
@@ -234,4 +251,4 @@ def internal_error(err):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)
