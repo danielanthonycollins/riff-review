@@ -18,7 +18,11 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+
 def login_required(route_function):
+    """
+    If the user is not logged in, redirects to the login page.
+    """
     @wraps(route_function)
     def wrapper(*args, **kwargs):
         if 'user' not in session:
