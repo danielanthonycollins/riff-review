@@ -538,6 +538,10 @@ I found the following bugs during the development process:
   - Cause: This was caused by the modal JS code in script.js added from Bootstrap
   - Solution: After removing said modal JS code, the error disappeared and all modals still worked as expected.
 
+- Logged out users able to access restricted pages
+  - Problem: When a user is logged out, they can still access pages restricted to logged in users only by replicating the URL in the URL bar. For example, logged out users can just add the extension /get_reviews onto the end of the home URL and access it without logging in.
+  - Cause: No code is present to ensure that only logged in users can access these pages.
+  - Solution: A new function was created for login_required which was applied to all the relevent pages which should be restricted to logged in users only. If a logged out user now tries to access one of these pages, they are redirected to the login page and told they must login to access them.
 
 ---
 
