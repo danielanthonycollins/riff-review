@@ -229,6 +229,7 @@ The form includes a confirm password input, and the website compares the two to 
 - An admin account could be added in future, with the relevant code to allow the admin to have full access to the application, including the ability to edit and delete all reviews, regardless if the review was created by the admin account itself.
 - Users could be asked as part of the register process what their favourite music genre is, and a suggested reviews section could be introduced showing reviews of that genre which may be of more interest to them than any other.
 - A voting/scoring system could be introduced so that users can 'like' a review, with the total likes showing on the review card. Reviews could then be sorted by popularity/likes.
+- By also obtaining the users email address, a forgot password function could be added allowing the user to reset their password if they forget their old one.
 
 ## **Testing Phase**
 
