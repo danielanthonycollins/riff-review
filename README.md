@@ -118,7 +118,17 @@ Wireframes are all based on a central responsive design using bootstrap, so only
 
 ### **Color Scheme**
 
-Other than the body which uses a clean white background, I decided to use a black/dark grey color scheme as those are the colours associated with the rock/metal community. Users from the rock/metal community should instantly feel at home with the colors chosen.
+Navbar and footer background: #212529 Dark Grey
+<br>
+Secondary buttons: #6c757d Light grey
+<br>
+Supporting text: #585c5f Grey
+<br>
+Footer text: #9a9d9e Grey
+
+The [WCAG Color Contrast Checker](https://accessibleweb.com/color-contrast-checker/) was used to ensure the grey text used against the dark grey background was suitable, all results passed except the small text in the AAA test, however after a discussion with my mentor we agreed this was OK as the criteria for the AAA testing is incredibly high and almost never passes.
+
+![Color contrast](documentation/color-contrast/colorcontrast.png)
 
 ## **Typography**
 
