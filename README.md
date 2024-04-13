@@ -602,7 +602,51 @@ I found the following bugs during the development process:
 
 ## **Deployment**
 
+This application was built using the Gitpod IDE and deployed via Heroku. Follow these instructions to recreate the deployment process:
 
+<strong>1. Prepare the required files</strong>
+
+In the CLI, type:
+
+pip3 freeze --local > requirements.txt
+
+and then...
+
+echo web: python app.py > Procfile
+
+These commands create two new files in your root directory which Heroku needs to run the application. Ensure Procfile includes a capital P and there is no file extension. Please check your Procfile and remove the last blank line if there is one, to avoid problems when trying to run your app.
+
+<strong>2. Create the app</strong>
+
+- Go to [Heroku](https://heroku.com/) and login to your account.
+- Click 'New' and then 'Create new app'.
+- Choose an app name and the region closest to you.
+
+**3. Linking to GitHub**
+
+- Within the deployment method, click 'GitHub'
+- With your GitHub profile selected, type in your repo name and then search.
+- Once found, click connect.
+
+**4. Environment variables**
+
+- Click on 'Settings' and then 'Reveal Config Vars'.
+- Add the required key/value variables from your env.py file.
+
+| Key          | Value             |
+| ------------ | ----------------- |
+| IP           | 0.0.0.0           |
+| PORT         | 5000              |
+| SECRET_KEY   | YOUR_SECRET_KEY   |
+| MONGO_URI    | YOUR_MONGO_URI    |
+| MONGO_DBNAME | YOUR_MONGO_DBNAME |
+
+**Deployment**
+
+- Ensure your two files in step 1 are pushed to GitHub.
+- Within the 'Deploy' tab of your Heroku app, click 'Enable Automatic Deploys'
+- Just below this, click 'Deploy Branch'.
+- Within a few minutes, Heroku should confirm your app has been deployed with a button to view it online.
 
 ---
 
