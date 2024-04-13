@@ -730,4 +730,4 @@ https://stackoverflow.com/questions/19605150/regex-for-password-must-contain-at-
 
 ### **Media**
 
-https://www.pexels.com/photo/man-playing-guitar-811838/ - Main home guitar image
+Main home guitar image - https://www.pexels.com/photo/man-playing-guitar-811838/
