@@ -641,7 +641,7 @@ These commands create two new files in your root directory which Heroku needs to
 | MONGO_URI    | YOUR_MONGO_URI    |
 | MONGO_DBNAME | YOUR_MONGO_DBNAME |
 
-**Deployment**
+**5. Deployment**
 
 - Ensure your two files in step 1 are pushed to GitHub.
 - Within the 'Deploy' tab of your Heroku app, click 'Enable Automatic Deploys'
