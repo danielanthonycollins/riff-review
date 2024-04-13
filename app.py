@@ -227,7 +227,6 @@ def delete_review(review_id):
     Takes the review id and removes that specific review.
     """
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
-    print(review["review_by"], session["user"])
     if review["review_by"] != session["user"]:
         flash("This is not your review.")
         return redirect(url_for("get_reviews"))
