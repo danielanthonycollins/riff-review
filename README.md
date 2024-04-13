@@ -691,14 +691,14 @@ pip3 install -r requirements.txt
 
 ## **Tech**
 
-Languages:
+Languages used:
 
 - HTML
 - CSS
 - JavaScript
 - Python
 
-Tools:
+Tools used:
 
 - MongoDB
 - Flask
