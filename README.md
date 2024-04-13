@@ -136,7 +136,7 @@ I decided to import the Oswald font from Google Fonts as I felt it had a rock vi
 
 ## **Features**
 
-<strong>Features common to all pages</strong>
+**Features common to all pages**
 
 Navigation - The navbar appears on every page of the application. However, the links shown in the image only appear when the user is logged in. If the user is not logged in, they will see Home, Login and Register. The nav bar is fully responsive and collapses inside of a 'burger' icon on smaller devices. If the user wishes to logout, they are prompted with a confirmation modal to ensure they didn't press it by mistake. This feature helps the user as it gives them a clear, easy way to navigate around the website and find what they need.
 
@@ -150,7 +150,7 @@ Flash messages - Flash messages, such as 'You are logged out. Bye for now!' and 
 
 ![Flash messages](documentation/features/flashmessages.png)
 
-<strong>Home Page</strong>
+**Home Page**
 
 Main guitar image - This is the first feature the user sees when they enter the website. It immediately fits the theme of the website, as it's someone playing a guitar. If the user isn't logged in, they see the register button and also a login prompt below if they do have an account. If the user is logged in already, the button changes to 'Browse Reviews' and the login prompt is removed. This feature helps the user because they have a quick way to register for an account and start reading and posting reviews if they haven't already registered, and also provides a quick way to browse reviews if they are logged in.
 
@@ -164,7 +164,7 @@ Recent reviews - This feature displays three randomly selected reviews stored in
 
 ![Recent reviews](documentation/features/homerecentreviews.png)
 
-<strong>Reviews Page</strong>
+**Reviews Page**
 
 Search box - This feature allows users to search for songs or artists, rather than scrolling through all of the reviews. The feature includes a reset button, so if the user has searched for something but wishes to reset the process, they are returned to the reviews page where they started. This feature helps the user as they can easily find a specific song or artist if they are looking for a particular one and saves them a lot of time scrolling through and reading a list of reviews, when the website can do it for them.
 
@@ -180,7 +180,7 @@ This feature helps the user as it's the main reason they are here, to read revie
 
 ![All reviews](documentation/features/allreviews.png)
 
-<strong>New Review Page</strong>
+**New Review Page**
 
 New Review form - This form is used to create a new review. The genre is a dropdown, which is populated by the genres pulled from the database. The song name, artist name and review title input fields include validation to allow a max length of 60 characters as this is long enough to describe the song, artist and provide a short & sharp title. Without it, the user could enter unlimited characters which could make the other pages messy where review previews are shown.
 
@@ -192,7 +192,7 @@ This feature helps the user as it allows them to get involved with the website a
 
 ![New review](documentation/features/newreview.png)
 
-<strong>Profile Page</strong>
+**Profile Page**
 
 Profile welcome message - This is a basic welcome message for the user when logged in and viewing their profile. The profile page is where the user lands when they register or login to their account. The message is populated with their username to give a more personal touch. This feature helps the user as it gives them confidence that the page is specific to them and will show more relevant information to their account, as opposed to everyone else's.
 
@@ -202,7 +202,7 @@ Profile reviews - This is where any reviews the particular user has created are 
 
 ![Profile reviews](documentation/features/profilereviews.png)
 
-<strong>Edit Review Page</strong>
+**Edit Review Page**
 
 Edit review form - This form is a replica of the new review form, however it is populated with the existing review details which can be altered as needed. To save the changes, the user clicked edit review and the website and database are updated simultaneously. If they change their mind and wish to go back, there is a button for this also which takes them back to the main reviews page. The app.py file includes logic to stop users trying to hack into other users reviews that don't belong to them. If the user in session doesn't match the user who created the review, a flash message appears to tell them it is not their review and they are unable to edit it.
 
@@ -210,7 +210,7 @@ This feature helps the user as it allows them to update their reviews if they ma
 
 ![Edit review](documentation/features/editreview.png)
 
-<strong>Review Details Page</strong>
+**Review Details Page**
 
 Review details - This is the page where the specific review selected is displayed in full. It includes all of the relevant details filled in when creating a review. If the user chooses that the song includes explicit language a red warning alert appears at the bottom which can't be missed. If the review belongs to the user logged in, they are also shown the edit and delete buttons. Otherwise, the user only sees the back to reviews button, for when they are done reading.
 
@@ -218,7 +218,7 @@ This feature helps the user as it allows them to read a single review and especi
 
 ![Review details](documentation/features/reviewdetails.png)
 
-<strong>Login Page</strong>
+**Login Page**
 
 Login form - This form allows the user to login to their account. If they haven't created one, a prompt to register an account is included below. They must enter a username and password that matches that of a record in the database or they are shown a flash message to tell them the details are incorrect. Once the user is logged in, they are in session which prompts the changes and features to appear throughout the site mentioned above.
 
@@ -226,7 +226,7 @@ This feature helps the user as it allows them to log in to their account if they
 
 ![Login](documentation/features/login.png)
 
-<strong>Register Page</strong>
+**Register Page**
 
 Register form - This form allows the user to register for an account if they don't already have one. If they already have an account, a prompt is displayed underneath the form where they can login. When registering for an account, the user must follow the validation requirements, clearly explained underneath each input. If they don't, they are told to follow the requirements when they try to register.
 
@@ -277,7 +277,7 @@ DevTools was also used to check the responsiveness at various screen sizes and d
 
 ### **Functionality**
 
-Manual testing as a logged <strong>OUT</strong> user
+Manual testing as a logged **OUT** user
 
 Feature/Test                                                                       | Expected Outcome.                                                                                                                                                  | Result |
 | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
@@ -297,7 +297,7 @@ Feature/Test                                                                    
 | Register Page, login link                                                        | Redirect to the login page                                                                                                                                         | Pass  |
 | Reviews, new review, edit review, delete review, review details, profile pages   | Trying to access these pages while not logged in should inform the user they must be logged in                                                                     | Pass  |
 
-Manual testing as a logged <strong>IN</strong> user
+Manual testing as a logged **IN** user
 
 Feature/Test                                                                       | Expected Outcome.                                                                                                               | Result |
 | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------ |
@@ -342,7 +342,7 @@ Feature/Test                                                                    
 
 ### **Validators**
 
-<strong>HTML Validators</strong>
+**HTML Validators**
 
 <details>
 <summary>Home Page</summary>
@@ -405,19 +405,19 @@ Feature/Test                                                                    
 </details>
 <br>
 
-<strong>CSS Validator</strong>
+**CSS Validator**
 
 style.css result
 
 ![style.css validator result](documentation/css-validator/cssvalidator.png)
 
-<strong>JS Hint</strong>
+**JS Hint**
 
 script.js result
 
 ![script.js validator result](documentation/js-validator/jsvalidator.png)
 
-<strong>CI Python Linter</strong>
+**CI Python Linter**
 
 app.py result
 
