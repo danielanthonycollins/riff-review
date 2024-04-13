@@ -602,21 +602,27 @@ I found the following bugs during the development process:
 
 ## **Deployment**
 
+### **Heroku**
+
 This application was built using the Gitpod IDE and deployed via Heroku. Follow these instructions to recreate the deployment process:
 
-<strong>1. Prepare the required files</strong>
+**1. Prepare the required files**
 
-In the CLI, type:
+In the terminal in your code editor, type:
 
+```
 pip3 freeze --local > requirements.txt
+```
 
 and then...
 
+```
 echo web: python app.py > Procfile
+```
 
 These commands create two new files in your root directory which Heroku needs to run the application. Ensure Procfile includes a capital P and there is no file extension. Please check your Procfile and remove the last blank line if there is one, to avoid problems when trying to run your app.
 
-<strong>2. Create the app</strong>
+**2. Create the app**
 
 - Go to [Heroku](https://heroku.com/) and login to your account.
 - Click 'New' and then 'Create new app'.
@@ -633,13 +639,15 @@ These commands create two new files in your root directory which Heroku needs to
 - Click on 'Settings' and then 'Reveal Config Vars'.
 - Add the required key/value variables from your env.py file.
 
-| Key          | Value             |
-| ------------ | ----------------- |
-| IP           | 0.0.0.0           |
-| PORT         | 5000              |
-| SECRET_KEY   | YOUR_SECRET_KEY   |
-| MONGO_URI    | YOUR_MONGO_URI    |
-| MONGO_DBNAME | YOUR_MONGO_DBNAME |
+| Key          | Value              |
+| ------------ | ------------------ |
+| IP           | 0.0.0.0            |
+| PORT         | 5000               |
+| SECRET_KEY   | YOUR_SECRET_KEY*   |
+| MONGO_URI    | YOUR_MONGO_URI*    |
+| MONGO_DBNAME | YOUR_MONGO_DBNAME* |
+
+Values with * are your own values to be created.
 
 **5. Deployment**
 
@@ -647,6 +655,37 @@ These commands create two new files in your root directory which Heroku needs to
 - Within the 'Deploy' tab of your Heroku app, click 'Enable Automatic Deploys'
 - Just below this, click 'Deploy Branch'.
 - Within a few minutes, Heroku should confirm your app has been deployed with a button to view it online.
+
+### **Local Development**
+
+**How to Fork**
+
+To fork the repository:
+
+- Log in to GitHub.
+- Go to the repository for this project, [Riff Review](https://github.com/danielanthonycollins/riff-review).
+- Click the Fork button in the top right corner to fork the repository.
+
+**How to Clone**
+
+To clone the repository:
+
+- Log in to GitHub.
+- Go to the repository for this project, [Riff Review](https://github.com/danielanthonycollins/riff-review).
+- Click on the code dropdown and select either HTTPS, SSH, or GitHub CLI depending on how you wish to clone. Copy the link provided.
+- Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+- Enter the following command in the terminal:
+
+```
+git clone { ADD LINK FROM STEP ABOVE HERE }
+```
+
+- Create a virtual environment (this step is not required if you are using the Code Institute template in Gitpod as this will already be set up for you).
+- Install the packages from the requirements.txt file by entering the following command in the terminal:
+
+```
+pip3 install -r requirements.txt
+```
 
 ---
 
