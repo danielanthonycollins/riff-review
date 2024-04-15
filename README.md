@@ -610,6 +610,11 @@ I found the following bugs during the development process:
   - Cause: No code is present to ensure that only logged in users can access these pages.
   - Solution: A new function was created for login_required which was applied to all the relevant pages which should be restricted to logged in users only. If a logged out user now tries to access one of these pages, they are redirected to the login page and told they must login to access them.
 
+- Deleting reviews
+  - Problem: If a user has more than one review linked to their account, when trying to delete anything other than the 1st review shown on the reviews or profile page, the application attempts to delete the 1st one, not the one the user clicked to delete.
+  - Cause: The delete button within each modal was associated with the same modal ID (deleteModal). Since each review generates its own modal with the same ID, clicking any delete button triggers the first modal found with that ID, leading to the deletion of the wrong review.
+  - Solution: Append the review ID to the modal ID and target. With this change, each delete button will open its associated modal, ensuring that the correct review is targeted for deletion.
+
 ---
 
 ## **Deployment**
