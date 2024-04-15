@@ -221,7 +221,6 @@ def edit_review(review_id):
 
 
 @app.route("/delete_review/<review_id>")
-@login_required
 def delete_review(review_id):
     """
     Takes the review id and removes that specific review.
