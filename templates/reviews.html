@@ -66,8 +66,8 @@
                     <!-- Show edit/delete buttons if review belongs to user -->
                     <a href="{{ url_for('edit_review', review_id=review._id) }}" class="btn btn-success me-1">Edit</a>
                     <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                        data-bs-target="#deleteModal">Delete</button>
-                    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModal"
+                        data-bs-target="#deleteModal{{ review._id }}">Delete</button>
+                    <div class="modal fade" id="deleteModal{{ review._id }}" tabindex="-1" aria-labelledby="deleteModal{{ review._id }}"
                         aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -81,8 +81,7 @@
                                     {{ review.artist_name }}?
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Go
-                                        back</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Go back</button>
                                     <a href="{{ url_for('delete_review', review_id=review._id) }}" class="btn btn-danger">Delete Review</a>
                                 </div>
                             </div>

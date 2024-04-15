@@ -56,8 +56,8 @@
                     {% if session.user|lower == review.review_by|lower %}
                     <a href="{{ url_for('edit_review', review_id=review._id) }}" class="btn btn-success me-1">Edit</a>
                     <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                        data-bs-target="#deleteModal">Delete</button>
-                    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModal"
+                        data-bs-target="#deleteModal{{ review._id }}">Delete</button>
+                    <div class="modal fade" id="deleteModal{{ review._id }}" tabindex="-1" aria-labelledby="deleteModal{{ review._id }}"
                         aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
